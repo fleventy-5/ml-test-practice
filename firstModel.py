@@ -11,15 +11,14 @@ data_weight = weight_height_data['Weight']
 data_height = weight_height_data['Height']
 
 x = np.array(data_weight)
-
 y = np.array(data_height)
 x = x.reshape(-1,1)
 
 
-x_train, x_test, y_train , y_test = train_test_split(x, y , test_size = 0.3, random_state =1)
+x_train, x_test, y_train , y_test = train_test_split(x, y , test_size = 0.33, random_state =1)
 
 
-model_1 = svm.SVR()
+model_1 = LinearRegression()
 model_1.fit(x_train,y_train)
 
 confidence = model_1.score(x_test,y_test)
