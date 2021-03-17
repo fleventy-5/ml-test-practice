@@ -27,7 +27,7 @@ Y_predict = model_1.predict(x_test)
 
 confidence = model_1.score(x_test,y_test)
 print(confidence)
-print(Y_predict)
+
 
 plt.plot(y_test)
 plt.plot(Y_predict)
